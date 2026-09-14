@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <!-- ================= HEADER ================= -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:background="#6DA5FF"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imgHeader"
+                android:layout_width="130dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="16dp"
+                android:contentDescription="Header Image"
+                android:scaleType="centerInside"
+                android:src="@drawable/header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ================= JUDUL ================= -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E - Absensi"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- ================= TENGAH (BUTTON) ================= -->
+        <LinearLayout
+            android:id="@+id/layoutCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintBottom_toTopOf="@id/footer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- MANAGER -->
+            <Button
+                android:id="@+id/btnManager"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Manager"
+                android:textColor="#000000"
+                android:backgroundTint="#6DA5FF"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ADMIN -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btnAdmin"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Admin"
+                    android:textColor="#000000"
+                    android:backgroundTint="#6DA5FF"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutAdminOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginStart="8dp"
+                    android:background="#6DA5FF">
+
+                    <TextView
+                        android:id="@+id/btnAdminBiasa"
+                        android:layout_width="140dp"
+                        android:layout_height="48dp"
+                        android:text="Admin"
+                        android:textColor="#000000"
+                        android:gravity="center"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#000000"/>
+
+                    <TextView
+                        android:id="@+id/btnSuperAdmin"
+                        android:layout_width="140dp"
+                        android:layout_height="48dp"
+                        android:text="Super Admin"
+                        android:textColor="#000000"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- USER -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUser"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:textColor="#000000"
+                    android:backgroundTint="#6DA5FF"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutUserOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginStart="8dp"
+                    android:background="#6DA5FF">
+
+                    <TextView
+                        android:id="@+id/btnKaryawan"
+                        android:layout_width="140dp"
+                        android:layout_height="48dp"
+                        android:text="Karyawan"
+                        android:textColor="#000000"
+                        android:gravity="center"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#000000"/>
+
+                    <TextView
+                        android:id="@+id/btnSecurity"
+                        android:layout_width="140dp"
+                        android:layout_height="48dp"
+                        android:text="Security"
+                        android:textColor="#000000"
+                        android:gravity="center"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#000000"/>
+
+                    <TextView
+                        android:id="@+id/btnOffice"
+                        android:layout_width="140dp"
+                        android:layout_height="48dp"
+                        android:text="Office Boy / Girl"
+                        android:textColor="#000000"
+                        android:gravity="center"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#000000"/>
+
+                    <TextView
+                        android:id="@+id/btnDriver"
+                        android:layout_width="140dp"
+                        android:layout_height="48dp"
+                        android:text="Driver"
+                        android:textColor="#000000"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ================= FOOTER ================= -->
+        <ImageView
+            android:id="@+id/footer"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:src="@drawable/footer"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:contentDescription="Footer Image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

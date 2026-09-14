@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ✅ Permission Kamera -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_aplikasi_absensi"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_aplikasi_absensi"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AbsensiPenggajianApp">
+        <activity
+            android:name=".ProfilAdminGraceManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilUserAndiManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AbsensiAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".RiwayatAbsensiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilUserAndiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilAdminGraceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AkunAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanWawanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanSatrioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanAndriActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanMutiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanGeraldActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanSarnoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanUcokActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanGraceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanAgusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaDataKaryawanAndiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DriverDataKaryawanManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OfficeDataKaryawanManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SecurityDataKaryawanManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KaryawanDataKaryawanManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDataKaryawanManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DatakaryawanManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenggunaActivity"
+            android:exported="false" />
+        <activity android:name=".AkunManagerActivity" />
+        <activity android:name=".AdminManagerActivity" />
+        <activity android:name=".OfficeManagerActivity" />
+        <activity android:name=".SecurityManagerActivity" />
+        <activity android:name=".KaryawanManagerActivity" />
+        <activity android:name=".ManagerActivity" />
+        <activity android:name=".LoginManagerActivity" />
+        <activity android:name=".DriverManagerActivity" /> <!-- ✅ Launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

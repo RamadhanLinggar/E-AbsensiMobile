@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- HEADER -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="#6DA5FF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:src="@drawable/header"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- PROFILE -->
+    <LinearLayout
+        android:id="@+id/layoutProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_profile"
+            android:background="@drawable/bg_profile_circle"
+            android:padding="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <!-- JUDUL -->
+    <TextView
+        android:id="@+id/tvAkunTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Akun"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/layoutProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- MENU -->
+    <LinearLayout
+        android:id="@+id/layoutMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvAkunTitle"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- ADMIN -->
+        <Button
+            android:id="@+id/btnAdmin"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:text="Admin"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:backgroundTint="#6DA5FF"/>
+
+        <!-- USER -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnUser"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:text="User"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:backgroundTint="#6DA5FF"/>
+
+            <LinearLayout
+                android:id="@+id/layoutUserOption"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginStart="12dp"
+                android:background="#6DA5FF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnKaryawan"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:text="Karyawan"
+                    android:gravity="center"/>
+
+                <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#000"/>
+
+                <TextView
+                    android:id="@+id/btnSecurity"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:text="Security"
+                    android:gravity="center"/>
+
+                <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#000"/>
+
+                <TextView
+                    android:id="@+id/btnOB"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:text="Office Boy/Girl"
+                    android:gravity="center"/>
+
+                <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#000"/>
+
+                <TextView
+                    android:id="@+id/btnDriver"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:text="Driver"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- BUTTON BACK -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:textColor="#000000"
+        android:backgroundTint="#6DA5FF"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- FOOTER -->
+    <ImageView
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:src="@drawable/footer"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

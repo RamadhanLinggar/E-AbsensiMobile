@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- ================= HEADER ================= -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="#6DA5FF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:src="@drawable/header"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ================= PROFIL ================= -->
+    <LinearLayout
+        android:id="@+id/layoutProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_profile"
+            android:background="@drawable/bg_profile_circle"
+            android:padding="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <!-- ================= JUDUL ================= -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Semua Akun\n“Karyawan”"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ================= TABEL (BORDER FIX) ================= -->
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#000000"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- HEADER -->
+        <TableRow
+            android:layout_margin="1dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:text="No"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+            <TextView
+                android:text="Nama"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+            <TextView
+                android:text="Detail"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <!-- ROW 1 -->
+        <TableRow
+            android:layout_margin="1dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:text="1"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:text="Andi"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:id="@+id/btnDetailAndi"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logodetail"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:contentDescription="Detail"/>
+        </TableRow>
+
+        <!-- ROW 2 -->
+        <TableRow
+            android:layout_margin="1dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:text="2"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:text="Agus"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:id="@+id/btnDetailAgus"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logodetail"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:contentDescription="Detail"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <!-- ================= BOTTOM ACTION ================= -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kembali"
+            android:textColor="#000000"
+            android:backgroundTint="#6DA5FF"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!-- ================= FOOTER ================= -->
+    <ImageView
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:src="@drawable/footer"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
